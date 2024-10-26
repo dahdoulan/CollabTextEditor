@@ -5,6 +5,8 @@ import org.example.codeeditorspring.entities.Session;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.InetSocketAddress;
 import java.util.*;
@@ -12,6 +14,7 @@ import java.util.*;
 @Slf4j
 public class MyWebSocketServer extends WebSocketServer {
     private final static Map<String, Session> sessionMap = new HashMap<>();
+    private static final Logger log = LoggerFactory.getLogger(MyWebSocketServer.class);
 
     public MyWebSocketServer(InetSocketAddress address) {
         super(address);
@@ -102,7 +105,7 @@ public class MyWebSocketServer extends WebSocketServer {
 
     @Override
     public void onError(WebSocket conn, Exception ex) {
-        log.error(ex.getMessage(), ex);
+        log.error(ex.getMessage());
     }
 
     @Override

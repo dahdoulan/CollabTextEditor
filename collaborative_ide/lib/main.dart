@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:collaborative_ide/screens/login.dart';
 import 'package:dio/dio.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -81,7 +83,12 @@ class _WebSocketExampleState extends State<WebSocketExample> {
         handleWebSocketMessage(message.toString());
       },
       onError: (error) {
-        print('WebSocket error: $error');
+        // Enhanced logging
+        if (error is WebSocketException) {
+          print('WebSocket error: ${error.message}');
+        } else {
+          print('Unexpected error: $error');
+        }
         setState(() => isConnected = false);
       },
       onDone: () {

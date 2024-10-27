@@ -53,11 +53,11 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC-LQrCzQKfPNbXhr-L70TmCcsUI9cyhfs',
-    appId: '1:921502080309:web:ee8e895c17046d2333407c',
-    messagingSenderId: '921502080309',
-    projectId: 'codecollab-idex',
-    authDomain: 'codecollab-idex.firebaseapp.com',
-    storageBucket: 'codecollab-idex.appspot.com',
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    authDomain: '',
+    storageBucket: '',
   );
 }

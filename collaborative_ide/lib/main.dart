@@ -14,10 +14,10 @@ void main() async {
 
   await Firebase.initializeApp(
     options: const FirebaseOptions(
-      apiKey: "AIzaSyC-LQrCzQKfPNbXhr-L70TmCcsUI9cyhfs",
-      appId: "1:921502080309:web:ee8e895c17046d2333407c",
-      messagingSenderId: "921502080309",
-      projectId: "codecollab-idex",
+      apiKey: "",
+      appId: "",
+      messagingSenderId: "",
+      projectId: "",
     ),
   );
   runApp(
